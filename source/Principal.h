@@ -1,5 +1,6 @@
 #include "Pessoa.h"
 #include "Universidade.h"
+#include "stdafx.h"
 
 class Principal {
    private:
@@ -11,9 +12,7 @@ class Principal {
     Universidade Princeton;
     Universidade Cambridge;
 
-    int diaAtual;
-    int mesAtual;
-    int anoAtual;
+    Data dataAtual;
 
    public:
     Principal();

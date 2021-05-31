@@ -8,3 +8,9 @@
 using std::cin;
 using std::cout;
 using std::endl;
+
+struct Data {
+    int dia;
+    int mes;
+    int ano;
+};
