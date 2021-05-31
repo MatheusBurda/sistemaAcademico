@@ -1,14 +1,26 @@
-#include "Pessoa.hpp"
+#include "Pessoa.h"
 
-#include <stdio.h>
-#include <string.h>
+#include "stdafx.h"
 
 Pessoa::Pessoa(int diaNasc, int mesNasc, int anoNasc, char* nome) {
+    inicializa(diaNasc, mesNasc, anoNasc, nome);
+}
+
+Pessoa::Pessoa() {
+    inicializa(0, 0, 0);
+}
+
+void Pessoa::inicializa(int diaNasc, int mesNasc, int anoNasc, char* nome) {
     diaP = diaNasc;
     mesP = mesNasc;
     anoP = anoNasc;
     idadeP = -1;
     strcpy(nomeP, nome);
+}
+
+void Pessoa::calcPrintIdade(int diaAtual, int mesAtual, int anoAtual) {
+    calcIdade(diaAtual, mesAtual, anoAtual);
+    imprimeIdade();
 }
 
 void Pessoa::calcIdade(int diaAtual, int mesAtual, int anoAtual) {
@@ -24,5 +36,21 @@ int Pessoa::getIdade() {
 }
 
 void Pessoa::imprimeIdade() {
-    printf("%s teria %d anos.\n", nomeP, idadeP);
+    cout << "A idade de " << nomeP << " seria " << idadeP << endl;
+}
+
+void Pessoa::setUniversidade(Universidade* pUni) {
+    pUnivFiliado = pUni;
+}
+
+void Pessoa::imprimeOndeTrabalha() {
+    cout << nomeP << " trabalha na " << pUnivFiliado->getNome() << endl;
+}
+
+void Pessoa::setDepartamento(Departamento* pDepart) {
+    pDepartFiliado = pDepart;
+}
+
+void Pessoa::imprimeQualDepartamentoTrabalha() {
+    cout << nomeP << " trabalha no departamento " << pDepartFiliado->getNome() << endl;
 }

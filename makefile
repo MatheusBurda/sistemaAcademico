@@ -4,8 +4,8 @@ PROJECT_NAME=exec
 # .cpp Files
 CPP_SOURCE=$(wildcard ./source/*.cpp)
 
-# .hpp Files
-HPP_SOURCE=$(wildcard ./source/*.hpp)
+# .h Files
+H_SOURCE=$(wildcard ./source/*.h)
 
 # Object Files
 OBJ=$(subst .cpp,.o,$(subst source,objects,$(CPP_SOURCE)))
@@ -18,7 +18,7 @@ CC_FLAGS=-c
 
 
 # Linker Flags
-LINKER_FLAGS=-Wall
+LINKER_FLAGS=-Wwrite-strings
 
 
 # Compilation and linking
@@ -30,12 +30,12 @@ $(PROJECT_NAME):	$(OBJ)
 				@ echo 'Finished buiding binary: $@'
 				@ echo ' '
 
-./objects/%.o: ./source/%.cpp ./source/%.hpp
+./objects/%.o: ./source/%.cpp ./source/%.h
 				@ echo 'Building target using G++ compiler: $<'
 				$(CC) -o $@ $< $(CC_FLAGS)
 				@ echo ' '
 
-./objects/main.o: ./source/main.cpp $(HPP_SOURCE)
+./objects/main.o: ./source/main.cpp $(H_SOURCE)
 		    @ echo 'Building target using G++ compiler: $<'
 		    $(CC) -o $@ $< $(CC_FLAGS)
 		    @ echo ' '
