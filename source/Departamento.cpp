@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-Departamento::Departamento(char* n = (char*)"") {
+Departamento::Departamento(char* n) {
     setNome(n);
 }
 
