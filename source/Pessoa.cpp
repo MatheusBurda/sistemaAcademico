@@ -1,7 +1,5 @@
 #include "Pessoa.h"
 
-#include "stdafx.h"
-
 Pessoa::Pessoa(int diaNasc, int mesNasc, int anoNasc, char* nome) {
     inicializa(diaNasc, mesNasc, anoNasc, nome);
 }
@@ -11,9 +9,9 @@ Pessoa::Pessoa() {
 }
 
 void Pessoa::inicializa(int diaNasc, int mesNasc, int anoNasc, char* nome) {
-    diaP = diaNasc;
-    mesP = mesNasc;
-    anoP = anoNasc;
+    dataNasc.dia = diaNasc;
+    dataNasc.mes = mesNasc;
+    dataNasc.ano = anoNasc;
     idadeP = -1;
     strcpy(nomeP, nome);
 }
@@ -24,10 +22,10 @@ void Pessoa::calcPrintIdade(int diaAtual, int mesAtual, int anoAtual) {
 }
 
 void Pessoa::calcIdade(int diaAtual, int mesAtual, int anoAtual) {
-    idadeP = anoAtual - anoP;
-    if (mesP > mesAtual)
+    idadeP = anoAtual - dataNasc.ano;
+    if (dataNasc.ano > mesAtual)
         idadeP--;
-    else if (mesAtual == mesP && diaP > diaAtual)
+    else if (mesAtual == dataNasc.ano && dataNasc.dia > diaAtual)
         idadeP--;
 }
 

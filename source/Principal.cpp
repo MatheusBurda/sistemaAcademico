@@ -2,8 +2,6 @@
 
 #include <time.h>
 
-#include "stdafx.h"
-
 Principal::Principal() {
     // Inicializa as Pessoas
     Simao.inicializa(3, 10, 1976, (char *)"Jean Simão");
@@ -28,9 +26,9 @@ Principal::Principal() {
 
     local = localtime(&segundos);
 
-    diaAtual = local->tm_mday;
-    mesAtual = local->tm_mon + 1;
-    anoAtual = local->tm_year + 1900;
+    dataAtual.dia = local->tm_mday;
+    dataAtual.mes = local->tm_mon + 1;
+    dataAtual.ano = local->tm_year + 1900;
 
     // Chama a função principal Executar
     Executar();
@@ -40,9 +38,9 @@ Principal::~Principal() {
 }
 
 void Principal::Executar() {
-    Simao.calcPrintIdade(diaAtual, mesAtual, anoAtual);
-    Eistein.calcPrintIdade(diaAtual, mesAtual, anoAtual);
-    Newton.calcPrintIdade(diaAtual, mesAtual, anoAtual);
+    Simao.calcPrintIdade(dataAtual.dia, dataAtual.mes, dataAtual.ano);
+    Eistein.calcPrintIdade(dataAtual.dia, dataAtual.mes, dataAtual.ano);
+    Newton.calcPrintIdade(dataAtual.dia, dataAtual.mes, dataAtual.ano);
 
     Simao.imprimeOndeTrabalha();
     Eistein.imprimeOndeTrabalha();

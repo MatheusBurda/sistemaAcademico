@@ -1,14 +1,13 @@
 #include "Departamento.h"
 #include "Universidade.h"
+#include "stdafx.h"
 
 class Pessoa {
    private:
-    int diaP;
-    int mesP;
-    int anoP;
     int idadeP;
     char nomeP[30];
 
+    Data dataNasc;
     Universidade* pUnivFiliado;
     Departamento* pDepartFiliado;
 
