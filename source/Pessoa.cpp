@@ -50,5 +50,6 @@ void Pessoa::setDepartamento(Departamento* pDepart) {
 }
 
 void Pessoa::imprimeQualDepartamentoTrabalha() {
-    cout << nomeP << " trabalha no departamento " << pDepartFiliado->getNome() << endl;
+    cout << nomeP << " trabalha no departamento " << pDepartFiliado->getNome()
+         << " na universidade " << pUnivFiliado->getNome() << endl;
 }

@@ -5,7 +5,8 @@ class Universidade {
    private:
     char nome[100];
 
-    Departamento depart;
+    int qDepartamentos;
+    Departamento* pDptos[50];
 
    public:
     Universidade(char* n = (char*)"");
@@ -13,4 +14,9 @@ class Universidade {
 
     void setNome(char* n);
     char* getNome();
+
+    void setDepartamento(Departamento* pdep);
+    void imprimeDepartamentos();
+
+    int getQtdDptos();
 };
