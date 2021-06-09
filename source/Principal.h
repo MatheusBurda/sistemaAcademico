@@ -1,13 +1,13 @@
 #include "Departamento.h"
-#include "Pessoa.h"
+#include "Professor.h"
 #include "Universidade.h"
 #include "stdafx.h"
 
 class Principal {
-   private:
-    Pessoa Simao;
-    Pessoa Eistein;
-    Pessoa Newton;
+private:
+    Professor Simao;
+    Professor Eistein;
+    Professor Newton;
 
     Universidade UTFPR;
     Universidade Princeton;
@@ -21,7 +21,7 @@ class Principal {
 
     Data dataAtual;
 
-   public:
+public:
     Principal();
     ~Principal();
     void Executar();

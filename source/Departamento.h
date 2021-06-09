@@ -3,13 +3,13 @@
 class Universidade;
 
 class Departamento {
-   private:
+private:
     char nome[100];
     int id;
 
     Universidade* pUniversidade;
 
-   public:
+public:
     Departamento(char* n = (char*)"");
     ~Departamento();
 

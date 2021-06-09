@@ -1,6 +1,7 @@
 #include "Principal.h"
 
-int main() {
+int main()
+{
     Principal sistema;
     return 0;
 }

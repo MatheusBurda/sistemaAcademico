@@ -36,20 +36,3 @@ int Pessoa::getIdade() {
 void Pessoa::imprimeIdade() {
     cout << "A idade de " << nomeP << " seria " << idadeP << endl;
 }
-
-void Pessoa::setUniversidade(Universidade* pUni) {
-    pUnivFiliado = pUni;
-}
-
-void Pessoa::imprimeOndeTrabalha() {
-    cout << nomeP << " trabalha na " << pUnivFiliado->getNome() << endl;
-}
-
-void Pessoa::setDepartamento(Departamento* pDepart) {
-    pDepartFiliado = pDepart;
-}
-
-void Pessoa::imprimeQualDepartamentoTrabalha() {
-    cout << nomeP << " trabalha no departamento " << pDepartFiliado->getNome()
-         << " na universidade " << pUnivFiliado->getNome() << endl;
-}

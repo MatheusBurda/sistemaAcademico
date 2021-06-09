@@ -2,13 +2,13 @@
 #include "Departamento.h"
 
 class Universidade {
-   private:
+private:
     char nome[100];
 
     int qDepartamentos;
     Departamento* pDptos[50];
 
-   public:
+public:
     Universidade(char* n = (char*)"");
     ~Universidade();
 
