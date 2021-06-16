@@ -10,10 +10,10 @@ private:
     Universidade* pUniversidade;
 
 public:
-    Departamento(char* n = (char*)"");
+    Departamento(const char* n = "");
     ~Departamento();
 
-    void setNome(char* n);
+    void setNome(const char* n);
     char* getNome();
 
     void setId(int x);

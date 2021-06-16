@@ -1,6 +1,6 @@
 #include "Aluno.h"
 
-Aluno::Aluno(int diaNasc, int mesNasc, int anoNasc, char* nome) :
+Aluno::Aluno(int diaNasc, int mesNasc, int anoNasc, const char* nome) :
 Pessoa(diaNasc, mesNasc, anoNasc, nome) {
     RA = -1;
 }

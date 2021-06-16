@@ -9,7 +9,7 @@ private:
     Departamento* pDepartFiliado;
 
 public:
-    Professor(int diaNasc, int mesNasc, int anoNasc, char* nome = (char*)"");
+    Professor(int diaNasc, int mesNasc, int anoNasc, const char* nome = "");
     Professor();
     ~Professor();
 

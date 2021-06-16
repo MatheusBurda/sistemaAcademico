@@ -1,14 +1,14 @@
 #include "Pessoa.h"
 
-Pessoa::Pessoa(int diaNasc, int mesNasc, int anoNasc, char* nome) {
+Pessoa::Pessoa(int diaNasc, int mesNasc, int anoNasc, const char* nome) {
     inicializa(diaNasc, mesNasc, anoNasc, nome);
 }
 
 Pessoa::Pessoa() {
-    inicializa(0, 0, 0);
+    inicializa(0, 0, 0, "");
 }
 
-void Pessoa::inicializa(int diaNasc, int mesNasc, int anoNasc, char* nome) {
+void Pessoa::inicializa(int diaNasc, int mesNasc, int anoNasc, const char* nome) {
     dataNasc.dia = diaNasc;
     dataNasc.mes = mesNasc;
     dataNasc.ano = anoNasc;

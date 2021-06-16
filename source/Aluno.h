@@ -7,7 +7,7 @@ private:
     int RA;
 
 public:
-    Aluno(int diaNasc, int mesNasc, int anoNasc, char* nome = (char*)"");
+    Aluno(int diaNasc, int mesNasc, int anoNasc, const char* nome = "");
     Aluno();
     ~Aluno();
     void setRA(int x);

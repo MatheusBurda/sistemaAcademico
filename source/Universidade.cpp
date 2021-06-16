@@ -2,17 +2,15 @@
 
 #include "stdafx.h"
 
-Universidade::Universidade(char* n) {
+Universidade::Universidade(const char* n) {
     setNome(n);
     qDepartamentos = 0;
-    for (int i = 0; i < 50; i++)
-        pDptos[i] = NULL;
 }
 
 Universidade::~Universidade() {
 }
 
-void Universidade::setNome(char* n) {
+void Universidade::setNome(const char* n) {
     strcpy(nome, n);
 }
 
@@ -21,19 +19,20 @@ char* Universidade::getNome() {
 }
 
 void Universidade::setDepartamento(Departamento* pdep) {
-    pDptos[qDepartamentos] = pdep;
+    if (pdep == NULL) {
+        cout << "ERROR: Ponteiro para departamento invalido" << endl;
+        return;
+    }
+
+    pDptos.push_back(pdep);
     pDptos[qDepartamentos]->setId(qDepartamentos);
     qDepartamentos++;
 }
 
 void Universidade::imprimeDepartamentos() {
-    cout << qDepartamentos << " Departamentos da Universidade " << nome << endl;
-    for (int i = 0; i < qDepartamentos; i++) {
+    cout << nome << " possui " << qDepartamentos << " departamento(s):" << endl;
+    for (int i = 0; i < (int)pDptos.size(); i++) {
         if (pDptos[i] != NULL)
             cout << pDptos[i]->getId() + 1 << " - " << pDptos[i]->getNome() << endl;
     }
-}
-
-int Universidade::getQtdDptos() {
-    return qDepartamentos + 1;
 }

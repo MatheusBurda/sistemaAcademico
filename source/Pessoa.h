@@ -8,10 +8,10 @@ protected:
     Data dataNasc;
 
 public:
-    Pessoa(int diaNasc, int mesNasc, int anoNasc, char* nome = (char*)"");
+    Pessoa(int diaNasc, int mesNasc, int anoNasc, const char* nome = "");
     Pessoa();
 
-    void inicializa(int diaNasc, int mesNasc, int anoNasc, char* nome = (char*)"");
+    void inicializa(int diaNasc, int mesNasc, int anoNasc, const char* nome);
     void calcIdade(int diaAtual, int mesAtual, int anoAtual);
     void calcPrintIdade(int diaAtual, int mesAtual, int anoAtual);
     int getIdade();

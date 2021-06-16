@@ -3,7 +3,7 @@
 #include "Universidade.h"
 #include "stdafx.h"
 
-Departamento::Departamento(char* n) {
+Departamento::Departamento(const char* n) {
     setNome(n);
     pUniversidade = NULL;
     id = -1;
@@ -12,7 +12,7 @@ Departamento::Departamento(char* n) {
 Departamento::~Departamento() {
 }
 
-void Departamento::setNome(char* n) {
+void Departamento::setNome(const char* n) {
     strcpy(nome, n);
 }
 

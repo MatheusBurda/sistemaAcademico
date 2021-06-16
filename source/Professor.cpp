@@ -1,6 +1,6 @@
 #include "Professor.h"
 
-Professor::Professor(int diaNasc, int mesNasc, int anoNasc, char* nome) :
+Professor::Professor(int diaNasc, int mesNasc, int anoNasc, const char* nome) :
 Pessoa(diaNasc, mesNasc, anoNasc, nome) {
     pDepartFiliado = NULL;
     pUnivFiliado = NULL;

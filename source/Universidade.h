@@ -1,22 +1,22 @@
 #pragma once
 #include "Departamento.h"
+#include <vector>
+using namespace std;
 
 class Universidade {
 private:
     char nome[100];
 
     int qDepartamentos;
-    Departamento* pDptos[50];
+    vector<Departamento*> pDptos;
 
 public:
-    Universidade(char* n = (char*)"");
+    Universidade(const char* n = "");
     ~Universidade();
 
-    void setNome(char* n);
+    void setNome(const char* n);
     char* getNome();
 
     void setDepartamento(Departamento* pdep);
     void imprimeDepartamentos();
-
-    int getQtdDptos();
 };

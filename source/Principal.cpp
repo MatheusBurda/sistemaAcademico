@@ -4,33 +4,33 @@
 
 Principal::Principal() {
     // Inicializa as Pessoas
-    Simao.inicializa(3, 10, 1976, (char*)"Jean Simão");
-    Eistein.inicializa(14, 3, 1879, (char*)"Albert Eistein");
-    Newton.inicializa(4, 1, 1643, (char*)"Isaac Newton");
+    Simao.inicializa(3, 10, 1976, "Jean Simão");
+    Eistein.inicializa(14, 3, 1879, "Albert Eistein");
+    Newton.inicializa(4, 1, 1643, "Isaac Newton");
 
     // Inicializa as Universidades
-    UTFPR.setNome((char*)"UTFPR");
-    Princeton.setNome((char*)"Princeton");
-    Cambridge.setNome((char*)"Cambrigde");
+    UTFPR.setNome("UTFPR");
+    Princeton.setNome("Princeton");
+    Cambridge.setNome("Cambrigde");
 
     // Inicializa os departamentos
-    DAINF.setNome((char*)"DAINF - Departamento academico de informatica");
+    DAINF.setNome("DAINF - Departamento academico de informatica");
     UTFPR.setDepartamento(&DAINF);
     DAINF.setUniversidade(&UTFPR);
 
-    DAELN.setNome((char*)"DAELN - Departamento academico de eletronica");
+    DAELN.setNome("DAELN - Departamento academico de eletronica");
     UTFPR.setDepartamento(&DAELN);
     DAELN.setUniversidade(&UTFPR);
 
-    DAMAT.setNome((char*)"DAMAT - Departamento academico de matematica");
+    DAMAT.setNome("DAMAT - Departamento academico de matematica");
     UTFPR.setDepartamento(&DAMAT);
     DAMAT.setUniversidade(&UTFPR);
 
-    FisicaPrinceton.setNome((char*)"Fisica");
+    FisicaPrinceton.setNome("Fisica");
     Princeton.setDepartamento(&FisicaPrinceton);
     FisicaPrinceton.setUniversidade(&Princeton);
 
-    MatematicaCambridge.setNome((char*)"Matematica");
+    MatematicaCambridge.setNome("Matematica");
     Cambridge.setDepartamento(&MatematicaCambridge);
     MatematicaCambridge.setUniversidade(&Cambridge);
 
