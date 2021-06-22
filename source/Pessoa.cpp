@@ -36,3 +36,11 @@ int Pessoa::getIdade() {
 void Pessoa::imprimeIdade() {
     cout << "A idade de " << nomeP << " seria " << idadeP << endl;
 }
+
+char* Pessoa::getNome() {
+    return nomeP;
+}
+
+Data Pessoa::getDataNascimento() {
+    return dataNasc;
+}

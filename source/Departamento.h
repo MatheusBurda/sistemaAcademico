@@ -1,6 +1,9 @@
 #pragma once
 
+#include "stdafx.h"
+
 class Universidade;
+class Disciplina;
 
 class Departamento {
 private:
@@ -8,6 +11,9 @@ private:
     int id;
 
     Universidade* pUniversidade;
+
+    Disciplina* pPrimDisciplina;
+    Disciplina* pDisciplinaAtual;
 
 public:
     Departamento(const char* n = "");
@@ -20,4 +26,7 @@ public:
     int getId();
 
     void setUniversidade(Universidade* pu);
+
+    void novaDisciplina(Disciplina* pDisciplina);
+    void imprimeListaDisciplinas();
 };

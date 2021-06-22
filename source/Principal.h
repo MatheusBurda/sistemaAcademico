@@ -1,4 +1,8 @@
+#pragma once
+
+#include "Aluno.h"
 #include "Departamento.h"
+#include "Disciplina.h"
 #include "Professor.h"
 #include "Universidade.h"
 #include "stdafx.h"
@@ -19,10 +23,28 @@ private:
     Departamento FisicaPrinceton;
     Departamento MatematicaCambridge;
 
+    Aluno Lara;
+    Aluno Matheus;
+    Aluno CarlWheezer;
+
+    Disciplina Calculo_1;
+    Disciplina TecProg;
+    Disciplina GAAL;
+    Disciplina Ed1;
+
     Data dataAtual;
 
 public:
     Principal();
     ~Principal();
+
+    void Inicializa();
+    void InicializaData();
+    void InicializaUniversidades();
+    void InicializaProfessores();
+    void InicializaDepartamentos();
+    void InicializaDisciplinas();
+    void InicializaAlunos();
+
     void Executar();
 };

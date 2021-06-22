@@ -1,4 +1,4 @@
-/* File to include all common used librarys */
+/* File to include all commonly used libraries */
 
 #pragma once
 

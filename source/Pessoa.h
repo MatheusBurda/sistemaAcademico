@@ -1,3 +1,5 @@
+#pragma once
+
 #include "stdafx.h"
 
 class Pessoa {
@@ -16,4 +18,7 @@ public:
     void calcPrintIdade(int diaAtual, int mesAtual, int anoAtual);
     int getIdade();
     void imprimeIdade();
+
+    char* getNome();
+    Data getDataNascimento();
 };

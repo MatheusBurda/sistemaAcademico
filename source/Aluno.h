@@ -1,5 +1,6 @@
+#pragma once
+
 #include "Pessoa.h"
-#include "Universidade.h"
 #include "stdafx.h"
 
 class Aluno : public Pessoa {

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Departamento.h"
 #include "Pessoa.h"
 #include "Universidade.h"
