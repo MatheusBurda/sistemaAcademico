@@ -4,16 +4,15 @@
 
 class Universidade;
 class Disciplina;
+class ListaDisciplinas;
 
 class Departamento {
 private:
     char nome[100];
-    int id;
 
     Universidade* pUniversidade;
 
-    Disciplina* pPrimDisciplina;
-    Disciplina* pDisciplinaAtual;
+    ListaDisciplinas* pListaDisciplinasDepart;
 
 public:
     Departamento(const char* n = "");
@@ -22,10 +21,8 @@ public:
     void setNome(const char* n);
     char* getNome();
 
-    void setId(int x);
-    int getId();
-
     void setUniversidade(Universidade* pu);
+    Universidade* getUniversidade();
 
     void novaDisciplina(Disciplina* pDisciplina);
     void imprimeListaDisciplinas();

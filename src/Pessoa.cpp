@@ -23,9 +23,9 @@ void Pessoa::calcPrintIdade(int diaAtual, int mesAtual, int anoAtual) {
 
 void Pessoa::calcIdade(int diaAtual, int mesAtual, int anoAtual) {
     idadeP = anoAtual - dataNasc.ano;
-    if (dataNasc.ano > mesAtual)
+    if (dataNasc.mes > mesAtual)
         idadeP--;
-    else if (mesAtual == dataNasc.ano && dataNasc.dia > diaAtual)
+    else if (mesAtual == dataNasc.mes && dataNasc.dia > diaAtual)
         idadeP--;
 }
 

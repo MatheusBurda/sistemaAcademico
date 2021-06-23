@@ -2,13 +2,13 @@
 PROJECT_NAME=exec
 
 # .cpp Files
-CPP_SOURCE=$(wildcard ./source/*.cpp)
+CPP_SOURCE=$(wildcard ./src/*.cpp)
 
 # .h Files
-H_SOURCE=$(wildcard ./source/*.h)
+H_SOURCE=$(wildcard ./src/*.h)
 
 # Object Files
-OBJ=$(subst .cpp,.o,$(subst source,objects,$(CPP_SOURCE)))
+OBJ=$(subst .cpp,.o,$(subst src,obj,$(CPP_SOURCE)))
 
 # Compiler
 CC=g++
@@ -30,19 +30,21 @@ $(PROJECT_NAME):	$(OBJ)
 				@ echo 'Finished buiding binary: $@'
 				@ echo ' '
 
-./objects/%.o: ./source/%.cpp ./source/%.h
+./obj/%.o: ./src/%.cpp ./src/%.h
 				@ echo 'Building target using G++ compiler: $<'
 				$(CC) -o $@ $< $(CC_FLAGS)
 				@ echo ' '
 
-./objects/main.o: ./source/main.cpp $(H_SOURCE)
+./obj/main.o: ./src/main.cpp $(H_SOURCE)
 		    @ echo 'Building target using G++ compiler: $<'
 		    $(CC) -o $@ $< $(CC_FLAGS)
 		    @ echo ' '
 
 objFolder:
-				@ mkdir -p objects
+				@ mkdir -p obj
 
 clean:
-		    @ $(RM) ./objects/*.o $(PROJECT_NAME) *~
-		    @ rmdir objects
+		    @ $(RM) ./obj/*.o $(PROJECT_NAME) *~
+		    @ rmdir obj
+
+rebuild: clean all

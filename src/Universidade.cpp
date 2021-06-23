@@ -4,10 +4,13 @@
 
 Universidade::Universidade(const char* n) {
     setNome(n);
-    qDepartamentos = 0;
+    listaDepartamentosUniv = new ListaDepartamentos();
 }
 
 Universidade::~Universidade() {
+    if (listaDepartamentosUniv != NULL)
+        delete (listaDepartamentosUniv);
+    listaDepartamentosUniv = NULL;
 }
 
 void Universidade::setNome(const char* n) {
@@ -24,15 +27,10 @@ void Universidade::setDepartamento(Departamento* pdep) {
         return;
     }
 
-    pDptos.push_back(pdep);
-    pDptos[qDepartamentos]->setId(qDepartamentos);
-    qDepartamentos++;
+    listaDepartamentosUniv->incluirDepartamento(pdep);
 }
 
 void Universidade::imprimeDepartamentos() {
-    cout << nome << " possui " << qDepartamentos << " departamento(s):" << endl;
-    for (int i = 0; i < (int)pDptos.size(); i++) {
-        if (pDptos[i] != NULL)
-            cout << pDptos[i]->getId() + 1 << " - " << pDptos[i]->getNome() << endl;
-    }
+    cout << nome << " possui " << listaDepartamentosUniv->getQDepartamentos() << " departamento(s):" << endl;
+    listaDepartamentosUniv->imprimeListaDepartamentos();
 }
