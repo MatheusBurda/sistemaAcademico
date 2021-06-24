@@ -18,4 +18,6 @@ public:
     void incluirDepartamento(Departamento* pd);
     void imprimeListaDepartamentos();
     int getQDepartamentos();
+
+    Departamento* localizarDepartamento(char* nome);
 };

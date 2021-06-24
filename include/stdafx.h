@@ -14,3 +14,5 @@ struct Data {
     int mes;
     int ano;
 };
+
+#define STR_LEN 100

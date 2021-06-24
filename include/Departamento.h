@@ -8,7 +8,7 @@ class ListaDisciplinas;
 
 class Departamento {
 private:
-    char nome[100];
+    char nome[STR_LEN];
 
     Universidade* pUniversidade;
 

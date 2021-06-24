@@ -6,7 +6,7 @@
 
 class Disciplina {
 private:
-    char nome[100];
+    char nome[STR_LEN];
 
     Departamento* pDepartamento;
 

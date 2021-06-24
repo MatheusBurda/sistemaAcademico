@@ -1,7 +1,5 @@
 #include "Universidade.h"
 
-#include "stdafx.h"
-
 Universidade::Universidade(const char* n) {
     setNome(n);
     listaDepartamentosUniv = new ListaDepartamentos();

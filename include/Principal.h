@@ -7,21 +7,20 @@
 #include "Universidade.h"
 #include "stdafx.h"
 
+#include "ListaDepartamentos.h"
+#include "ListaDisciplinas.h"
+
 class Principal {
 private:
     Professor Simao;
-    Professor Eistein;
-    Professor Newton;
 
     Universidade UTFPR;
-    Universidade Princeton;
-    Universidade Cambridge;
+    ListaDepartamentos listaOBJDepartamentos;
+    ListaDisciplinas listaOBJDisciplinas;
 
     Departamento DAINF;
     Departamento DAELN;
     Departamento DAMAT;
-    Departamento FisicaPrinceton;
-    Departamento MatematicaCambridge;
 
     Aluno Lara;
     Aluno Matheus;
@@ -47,4 +46,10 @@ public:
     void InicializaAlunos();
 
     void Executar();
+
+    void MenuPrincipal();
+    void MenuCadastro();
+    void MenuExec();
+    void CadDisciplina();
+    void CadDepartamento();
 };

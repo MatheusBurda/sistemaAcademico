@@ -5,7 +5,7 @@
 class Pessoa {
 protected:
     int idadeP;
-    char nomeP[30];
+    char nomeP[STR_LEN];
 
     Data dataNasc;
 

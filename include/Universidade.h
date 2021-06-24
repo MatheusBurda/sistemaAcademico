@@ -2,12 +2,12 @@
 
 #include "Departamento.h"
 #include "ListaDepartamentos.h"
-
+#include "stdafx.h"
 
 class Universidade {
 private:
-    char nome[100];
-    
+    char nome[STR_LEN];
+
     ListaDepartamentos* listaDepartamentosUniv;
 
 public:

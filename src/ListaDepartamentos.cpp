@@ -58,3 +58,15 @@ void ListaDepartamentos::imprimeListaDepartamentos() {
 int ListaDepartamentos::getQDepartamentos() {
     return nDepartamentos;
 }
+
+Departamento* ListaDepartamentos::localizarDepartamento(char* nome) {
+    ElDepartamento* paux;
+    paux = pPrimDepartamento;
+
+    while (paux != NULL) {
+        if (strcmp(nome, paux->getNome()) == 0)
+            return paux->getDepartamento();   
+        paux = paux->getProxDepartamento();
+    }
+    return NULL;
+}

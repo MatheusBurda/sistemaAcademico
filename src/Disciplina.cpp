@@ -3,6 +3,7 @@
 Disciplina::Disciplina(int qAlunos, const char* n) :
 listaAlunosMatriculados(qAlunos) {
     pDepartamento = NULL;
+    strcpy(nome, n);
 }
 
 Disciplina::~Disciplina() {
