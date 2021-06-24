@@ -1,10 +1,10 @@
 # Project Name
 PROJECT := sistemaAcademico
 
-# Source folder
+# Source, Objects and Binaries folder
 SRC_DIR := src
-# Object folder - to be created
 OBJ_DIR := obj
+BIN_DIR := bin
 
 SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
@@ -20,7 +20,7 @@ LDLIBS   := -lm
 
 .PHONY: all clean build
 
-all: $(PROJECT)
+all: build $(PROJECT)
 
 $(PROJECT): $(OBJ)
 	@ $(CC) $(LDFLAGS) $^ $(LDLIBS) -o $@
@@ -29,16 +29,14 @@ $(PROJECT): $(OBJ)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIR):
+$(BIN_DIR) $(OBJ_DIR):
 	@ mkdir -p $@
 
-build: cleanMain all
-
-cleanMain:
+build:
 	@ echo '=============== Started building project using g++ compiler ==============='
 	@ $(RM) $(OBJ_DIR)/main.o
 
 clean:
-	@ $(RM) -r $(OBJ_DIR) $(PROJECT)
+	@ $(RM) -r $(OBJ_DIR) $(PROJECT) $(BIN_DIR)
 
 -include $(OBJ:.o=.d)
